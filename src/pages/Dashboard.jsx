@@ -28,7 +28,11 @@ export default function DashboardPage({ onNavigate }) {
 
   return (
     <>
-      <Header title="Дашборд" subtitle="Коммерческие предложения — обзор" onNavigate={onNavigate} />
+      <Header
+  title="Dashboard"
+  onNavigate={onNavigate}
+  currentPage="dashboard"
+/>
 
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: 24 }}>
         {/* KPI row */}
