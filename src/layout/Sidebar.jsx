@@ -1,11 +1,10 @@
 import {
-  LayoutDashboard, Building2, FilePlus, FileText,
+  Building2, FilePlus, FileText,
   ChevronDown, HardHat, DollarSign,
 } from "lucide-react";
 
 export default function Sidebar({ currentPage, onNavigate }) {
   const navItems = [
-    { id: "dashboard", label: "Дашборд",       icon: LayoutDashboard },
     { id: "proposals", label: "КП",             icon: FileText },
     { id: "company",   label: "Компания",       icon: Building2 },
     { id: "pricelist", label: "Прайс услуг",    icon: DollarSign },
