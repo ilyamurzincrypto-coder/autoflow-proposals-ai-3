@@ -1,13 +1,11 @@
 import { useState } from "react";
 import Sidebar from "./layout/Sidebar";
-import DashboardPage from "./pages/Dashboard";
 import ProposalsPage from "./pages/Proposals";
 import CreateProposalPage from "./pages/CreateProposal";
 import CompanyPage from "./pages/Company";
 import PriceListPage from "./pages/PriceList";
 
 const PAGE_MAP = {
-  dashboard:       DashboardPage,
   proposals:       ProposalsPage,
   "proposals/new": CreateProposalPage,
   company:         CompanyPage,
@@ -15,9 +13,9 @@ const PAGE_MAP = {
 };
 
 export default function App() {
-  const [page, setPage] = useState("dashboard");
+  const [page, setPage] = useState("proposals");
 
-  const ActivePage = PAGE_MAP[page] || DashboardPage;
+  const ActivePage = PAGE_MAP[page] || ProposalsPage;
 
   return (
     <div
