@@ -350,7 +350,12 @@ export default function PriceListPage({ onNavigate }) {
 
   return (
     <>
-      <Header title="Прайс услуг" subtitle="Расценки на монтаж вентилируемых фасадов" onNavigate={onNavigate} />
+      <Header
+  title="Прайс услуг"
+  subtitle="Расценки на монтаж вентилируемых фасадов"
+  onNavigate={onNavigate}
+  currentPage="pricelist"
+/>
 
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: 24 }}>
         {/* Top bar */}
