@@ -6,10 +6,11 @@ export default function ProposalsPage({ onNavigate }) {
   return (
     <>
       <Header
-        title="Коммерческие предложения"
-        subtitle="Все КП вашей компании"
-        onNavigate={onNavigate}
-      />
+  title="КП"
+  subtitle="..."
+  onNavigate={onNavigate}
+  currentPage="proposals"
+/>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: 24 }}>
         <ProposalsTable proposals={PROPOSALS} onNavigate={onNavigate} />
       </div>
