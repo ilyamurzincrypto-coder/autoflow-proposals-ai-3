@@ -1,6 +1,6 @@
 import { Search, Plus, Bell } from "lucide-react";
 
-export default function Header({ title, subtitle, onNavigate }) {
+export default function Header({ title, subtitle, onNavigate, currentPage }) {
   return (
     <div
       style={{
@@ -19,25 +19,35 @@ export default function Header({ title, subtitle, onNavigate }) {
         {subtitle && <p style={{ fontSize: 12, color: "#94a3b8", marginTop: 1 }}>{subtitle}</p>}
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <div style={{ position: "relative" }}>
-          <Search
-            size={15}
-            style={{
-              position: "absolute", left: 11, top: "50%",
-              transform: "translateY(-50%)", color: "#c4c4cc",
-            }}
-          />
-          <input
-            placeholder="Поиск КП..."
-            style={{
-              width: 200, height: 34, paddingLeft: 34, paddingRight: 12,
-              borderRadius: 9, border: "1px solid #ededf0",
-              background: "#fbfbfd", fontSize: 13, outline: "none", color: "#52525b",
-            }}
-          />
-        </div>
-
+     {currentPage === "proposals" && (
+  <div style={{ position: "relative" }}>
+    <Search
+      size={15}
+      style={{
+        position: "absolute",
+        left: 11,
+        top: "50%",
+        transform: "translateY(-50%)",
+        color: "#c4c4cc",
+      }}
+    />
+    <input
+      placeholder="Поиск КП..."
+      style={{
+        width: 200,
+        height: 34,
+        paddingLeft: 34,
+        paddingRight: 12,
+        borderRadius: 9,
+        border: "1px solid #ededf0",
+        background: "#fbfbfd",
+        fontSize: 13,
+        outline: "none",
+        color: "#52525b",
+      }}
+    />
+  </div>
+)}
         <button
           style={{
             width: 34, height: 34, borderRadius: 9,
