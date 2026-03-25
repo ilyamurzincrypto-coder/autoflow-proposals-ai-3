@@ -78,7 +78,7 @@ export default function CreateProposalPage({ onNavigate }) {
       >
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <button
-            onClick={() => onNavigate("dashboard")}
+            onClick={() => onNavigate("proposals")}
             style={{
               width: 32, height: 32, borderRadius: 8,
               border: "1px solid #ededf0", background: "white",
