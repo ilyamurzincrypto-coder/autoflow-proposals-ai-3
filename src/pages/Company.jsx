@@ -9,7 +9,12 @@ export default function CompanyPage({ onNavigate }) {
 
   return (
     <>
-      <Header title="Компания" subtitle="Профиль подрядчика" onNavigate={onNavigate} />
+      <Header
+  title="Компания"
+  subtitle="Профиль подрядчика"
+  onNavigate={onNavigate}
+  currentPage="company"
+/>
 
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: 24 }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
